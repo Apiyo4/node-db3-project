@@ -28,5 +28,12 @@ function update(changes, id){
     .update(changes)
 
 }
- module.exports = { find, findById, findSteps, add, update }
+// delete from schemes
+// where id = 8 
+function remove(id){
+    return db('schemes')
+    .where('id', Number(id))
+    .del()
+}
+ module.exports = { find, findById, findSteps, add, update, remove }
  
