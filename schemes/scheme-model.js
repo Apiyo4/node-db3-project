@@ -19,17 +19,14 @@ function add(scheme){
     .insert('scheme')
 
 }
-// Update Schemes
-// set scheme_name =  'Sleep'
-// where id = 8
+
 function update(changes, id){
     return db('schemes')
     .where('id', Number(id))
     .update(changes)
 
 }
-// delete from schemes
-// where id = 8 
+
 function remove(id){
     return db('schemes')
     .where('id', Number(id))
